@@ -112,24 +112,36 @@ body {
     padding: 3%;
   }
 }
-footer .grid-container {
-  display: grid;
-  gap: 0;
-  grid-template-columns: auto auto auto;
+footer .container {
+  display: flex;
+  padding: 10px;
 }
-footer .grid-container .contact {
-  grid-column: 1/span 1;
-  grid-row: 1;
+footer .container .contact_container {
+  flex-direction: column;
 }
-footer .grid-container .contact1 {
-  grid-column: 1/span 1;
-  grid-row: 2;
+footer .container .contact_container .contact {
+  margin: 10px;
+  width: 40vw;
+  height: 25vw;
+  text-align: center;
+  background-color: rgb(190, 183, 183);
+  padding-top: 5vw;
 }
-footer .align-right {
-  grid-column: 3;
-  grid-row: 1/span 2;
-  height: 100%;
-  overflow-wrap: break-word;
+footer .container .contact_container .contact img {
+  margin-bottom: 2vw;
+}
+footer .container .contact_container .contact p {
+  background-color: white;
+  padding-top: 0.5vw;
+  margin: 0vw 2vw;
+}
+footer .container .contact_container .contact ul {
+  background-color: white;
+  margin: 2vw;
+  padding: 1vw;
+}
+footer .container .align-right {
+  background-color: red;
 }
 
 /*# sourceMappingURL=style.css.map */

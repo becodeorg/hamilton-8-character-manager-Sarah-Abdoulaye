@@ -1,25 +1,35 @@
 footer {
-    & .grid-container {
-      display: grid;
-      gap: 0;
-      grid-template-columns: auto auto auto;
-  
-      & .contact {
-        grid-column: 1 / span 1;
-        grid-row: 1;
-      }
-  
-      & .contact1 {
-        grid-column: 1 / span 1;
-        grid-row: 2;
-      }
-    }
-  
-    & .align-right {
-      grid-column: 3;
-      grid-row: 1 / span 2;
-      height: 100%;
-      overflow-wrap: break-word;
-    }
+  & .container {
+    display: flex;
+    padding: 10px;
+     & .contact_container {
+      flex-direction: column;
+      
+       & .contact {
+        margin: 10px;
+        width: 40vw;
+        height: 25vw;
+        text-align: center;
+        background-color: $backColorDiv;
+        padding-top: 5vw;
+         & img {
+          margin-bottom: 2vw;
+         }
+         & p {
+          background-color: $white;
+          padding-top: 0.5vw;
+          margin: 0vw 2vw;
+         }
+         & ul {
+          background-color: $white;
+          margin: 2vw;
+          padding: 1vw;
+         }
+       }
+     }
+     & .align-right {
+      background-color: red;
+      
+     }
   }
-  
+}
