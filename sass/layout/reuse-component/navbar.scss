@@ -1,20 +1,20 @@
     .nav{
-        position: relative;
         width: 100%;
         @include row-spacebetween;
         @include co-ka;
+        
         h1{
-            font-size: 1.5rem;
+            font-size: 2.5rem;
             text-transform: uppercase;
-            margin-left: 2%;
+            margin-left: 1%;
+            color: $orangefonce;
         }
         .menu{
-            position: absolute;
             @include row-spacearound;
-            width: 70%;
-            left: 30%;
+            margin:2%;
+            width: 30%;
             .lien-menu{
-                width: 25%;
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -37,12 +37,59 @@
         .burger{
             display: none;
             position: absolute;
-            left: 50px;
-            top: 50px;
+            right: 10px;
+            top: 10px;
             .bar{
                 background-color: $orangefonce;
-                width: 30px;
-                height: 3px;
+                width: 40px;
+                height: 4px;
+                margin-bottom:7px;
+            }
+        }
+    }
+
+    @media screen and (max-width:765px){
+        .nav{
+            h1{
+                font-size: 2rem;
+                padding: 1%;
+            }
+            .menu{
+                position: absolute;
+                width: 100vw;
+                height: 100vh;
+                @include co-ka;
+                color: white;
+                top: -15px;
+                left: -110%;
+                @include column;
+                padding-top: 100px;
+                .lien-menu{
+                    margin-top: 25px;
+                    width: 100%;
+                    .lien-nav{
+                        border: none;
+                        border-bottom: solid $orangefonce 2px;
+                        font-size: 2.5rem;
+                        text-align: left;
+                        border-radius: 0;
+                        width: 100%;
+                    }
+                }
+            }
+            .mobile-menu{
+                left: -15px;
+            }
+            .burger{
+                display: block;
+            }
+        }
+    }
+    @media screen and (max-width:450px){
+        .nav{
+            h1{
+                font-size: 1.5rem;
+                padding:3%;
             }
         }
     }

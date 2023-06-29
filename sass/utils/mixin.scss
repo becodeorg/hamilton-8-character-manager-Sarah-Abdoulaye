@@ -13,6 +13,13 @@
         align-items: center;
         justify-content: space-around;
     }
+
+    @mixin column{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
 // mixin variables
 
     @mixin co-ka{
