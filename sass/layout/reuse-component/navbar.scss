@@ -59,7 +59,7 @@
                 width: 100vw;
                 height: 100vh;
                 @include co-ka;
-                color: white;
+                color: $orangefonce;
                 top: -15px;
                 left: -110%;
                 @include column;
@@ -74,6 +74,9 @@
                         text-align: left;
                         border-radius: 0;
                         width: 100%;
+                    }
+                    &:hover{
+                        transform: scale(0);
                     }
                 }
             }

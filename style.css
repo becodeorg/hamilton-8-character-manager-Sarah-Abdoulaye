@@ -75,7 +75,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(#FF7F50, Khaki);
-    color: white;
+    color: #b84c25;
     top: -15px;
     left: -110%;
     display: flex;
@@ -95,6 +95,9 @@ body {
     text-align: left;
     border-radius: 0;
     width: 100%;
+  }
+  .nav .menu .lien-menu:hover {
+    transform: scale(0);
   }
   .nav .mobile-menu {
     left: -15px;
