@@ -1,0 +1,48 @@
+    .nav{
+        position: relative;
+        width: 100%;
+        @include row-spacebetween;
+        @include co-ka;
+        h1{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-left: 2%;
+        }
+        .menu{
+            position: absolute;
+            @include row-spacearound;
+            width: 70%;
+            left: 30%;
+            .lien-menu{
+                width: 25%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .lien-nav{
+                    color: $orangefonce;
+                    border: solid $orangefonce 1px;
+                    padding: 3%;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    width: 60%;
+                    text-align: center;
+                    &:hover{
+                        transform: scale(1.5);
+                        background-color: $orangefonce;
+                        color: $kaki;
+                    }
+                }
+            }
+        }
+        .burger{
+            display: none;
+            position: absolute;
+            left: 50px;
+            top: 50px;
+            .bar{
+                background-color: $orangefonce;
+                width: 30px;
+                height: 3px;
+            }
+        }
+    }

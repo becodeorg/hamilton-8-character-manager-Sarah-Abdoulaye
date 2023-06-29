@@ -1,0 +1,20 @@
+// mixin flex
+
+    @mixin row-spacebetween{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    @mixin row-spacearound{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+// mixin variables
+
+    @mixin co-ka{
+        background: linear-gradient($corail,$kaki);
+    }

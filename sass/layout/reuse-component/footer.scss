@@ -1,0 +1,25 @@
+footer {
+    & .grid-container {
+      display: grid;
+      gap: 0;
+      grid-template-columns: auto auto auto;
+  
+      & .contact {
+        grid-column: 1 / span 1;
+        grid-row: 1;
+      }
+  
+      & .contact1 {
+        grid-column: 1 / span 1;
+        grid-row: 2;
+      }
+    }
+  
+    & .align-right {
+      grid-column: 3;
+      grid-row: 1 / span 2;
+      height: 100%;
+      overflow-wrap: break-word;
+    }
+  }
+  
