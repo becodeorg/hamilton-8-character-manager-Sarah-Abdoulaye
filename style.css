@@ -112,6 +112,12 @@ body {
     padding: 3%;
   }
 }
+main section article {
+  width: 250px;
+  height: 250px;
+  border: dotted blue 3px;
+}
+
 footer .container {
   display: flex;
   padding: 10px;
