@@ -15,10 +15,32 @@ fetch("https://character-database.becode.xyz/characters")
     data.forEach(ligne  => {
         let articleCharacter = document.createElement("article");
         main.append(articleCharacter);
-        articleCharacter.innerText = ligne.name;
-        //articleCharacter.innerText = ligne.descritpion
-        //aller rechercher les noms
+        
+        let nom = document.createElement("p");
+        nom.className = "nom";
+        articleCharacter.append(nom);
+        nom.innerText = ligne.name;
+
+        
+        let shortdescription = document.createElement("div");
+        shortdescription.className = "shortdescription";
+        articleCharacter.append(shortdescription);
+        shortdescription.innerText = ligne.shortDescription;
+
+
+        let description = document.createElement("div");
+        description.className = "description";
+        articleCharacter.append(description);
+        description.innerHTML = ligne.description;
+
+        let img = document.createElement("img");
+        articleCharacter.append(img);
+
+        //articleCharacter.innerHTML = ligne.image
+
+
         console.log(ligne);
+        console.log(articleCharacter);
     });
 })
 .catch(error => console.log("Une erreur c'est produite lors du chargement de la page"))

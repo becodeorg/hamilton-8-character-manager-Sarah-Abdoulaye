@@ -20,8 +20,26 @@
         justify-content: flex-start;
         align-items: flex-start;
     }
+
+    /*@mixin column-spacearound{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }*/
+
 // mixin variables
 
     @mixin co-ka{
         background: linear-gradient($corail,$kaki);
+    }
+
+    @mixin ka-co{
+        background: linear-gradient($kaki,$corail);
+    }
+
+    @mixin box-shadow{
+        box-shadow: -2px 5px 10px 0px $orangefonce;
+        -webkit-box-shadow: -2px 5px 10px 0px $orangefonce;
+        -moz-box-shadow: -2px 5px 10px 0px $orangefonce; 
     }
