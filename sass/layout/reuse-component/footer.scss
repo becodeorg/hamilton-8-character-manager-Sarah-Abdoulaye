@@ -1,35 +1,42 @@
 footer {
   & .container {
     display: flex;
-    padding: 10px;
+    padding: 1vw;
+    background-color: $backColorFoot;
      & .contact_container {
       flex-direction: column;
       
        & .contact {
-        margin: 10px;
-        width: 40vw;
-        height: 25vw;
+        margin: 1vw;
+        width: 30vw;
+        height: 21vw;
         text-align: center;
         background-color: $backColorDiv;
-        padding-top: 5vw;
+        padding-top: 3vw;
          & img {
           margin-bottom: 2vw;
          }
          & p {
           background-color: $white;
-          padding-top: 0.5vw;
+          padding: 0.2vw;
           margin: 0vw 2vw;
+          font-size: 1.5vw;
          }
          & ul {
           background-color: $white;
           margin: 2vw;
-          padding: 1vw;
+          padding: 0vw;
+          font-size: 1.4vw;
+          width: 26vw;
+          height: 6vw;
          }
        }
      }
      & .align-right {
       background-color: red;
-      
+      width: 70%;
+      margin: 1vw 0vw 1vw 0.5vw;
+      background-color: $backColorDiv;
      }
   }
 }
