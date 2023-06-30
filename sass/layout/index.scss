@@ -1,5 +1,14 @@
-main{
-    section{
+.home{
+    background-color: red;
+    height: 100vh;
+    padding-top: 150px;
+    .sectionCharacter{
+        height: 90%;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid yellow 4px;
         article{
             width: 250px;
             height: 250px;

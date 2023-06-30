@@ -2,7 +2,7 @@ footer {
   & .container {
     display: flex;
     padding: 1vw;
-    background-color: $backColorFoot;
+    @include co-ka;
      & .contact_container {
       flex-direction: column;
       
