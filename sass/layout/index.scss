@@ -1,33 +1,42 @@
-body{
-    background-color: $kaki;
-    main{
-        display:flex;
-        flex-wrap: wrap;
-        justify-content: center;
 
-        article{
-            border: solid $orangefonce  5px;
-            background-color: rgb(59, 21, 21);
-            margin: 1%;
-            padding: 1%;
-            width: 350px;
-            height: 350px;
-            border-radius: 20px;
-            @include box-shadow;
-            color: rgb(234, 217, 248);
-            text-align: center;
-            .nom{
-                font-size: 1.5rem;
-            }
-            .description{
-                max-lines: 5;
-                overflow: hidden;
-                height: 50%;
-            }
-            .create {
-                background-color: blue;
-            }
+body {
+  background-color: $body-color;
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    article {
+      border: solid $orange-fonce 5px;
+      background-color: rgb(59, 21, 21);
+      margin: 1%;
+      padding: 1%;
+      width: 400px;
+      height: 500px;
+      border-radius: 20px;
+      @include box-shadow;
+      color: rgb(234, 217, 248);
+      text-align: center;
+      
+      .nom {
+        font-size: 1.5rem;
+      }
+      
+      .description {
+        max-lines: 5;
+        overflow: hidden;
+        height: 50%;
+      }
+      
+      .create {
+        background-color: blue;
+        
+        .img {
+          width: 100px;
+          height: 100px; 
         }
-
+      }
     }
+  }
 }
