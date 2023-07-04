@@ -5,13 +5,13 @@ body{
         flex-wrap: wrap;
         justify-content: center;
 
-        article{
+    article{
             border: solid $orangefonce  5px;
             background-color: rgb(59, 21, 21);
             margin: 1%;
             padding: 1%;
-            width: 350px;
-            height: 350px;
+            width: 400px;
+            height: 500px;
             border-radius: 20px;
             @include box-shadow;
             color: rgb(234, 217, 248);
@@ -26,9 +26,8 @@ body{
             }
             .img{
                 width: 100px;
-                height: 100px;
+                height: 100px; 
             }
         }
-
     }
 }
