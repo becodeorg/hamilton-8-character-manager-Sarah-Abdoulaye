@@ -56,7 +56,31 @@ fetch("https://character-database.becode.xyz/characters")
         buttonedit.className = "buttonedit";
         console.log(buttonedit);
         buttonedit.innerHTML = "Edit";
-        
+        // Code pour supprimer le activeCharactere
+        buttondelete.addEventListener("click", () => {
+            fetch("https://character-database.becode.xyz/characters/", {
+                method: "DELETE",
+                //Le header défini que les données qu'on envoi seront en format JSON (metadata, complément d'information à destination de l'API)
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body:JSON.stringify({
+                    name:nom ,
+                    shortDescription:shortdescription,
+                    description :  description,
+                    image : img,
+                })
+            })
+        })
+
+
+        /*
+        //permet de supprimer l'article localement mais pas sur le serveur.
+        buttondelete.addEventListener("click", () => {
+            const articleCharacter = buttondelete.parentNode;
+            articleCharacter.remove();
+        });*/
+
         // Permet d'afficher pour tester. 
         //console.log(imgBase);
         console.log(img);
