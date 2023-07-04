@@ -2,6 +2,7 @@
 const body = document.querySelector("body");
 const main = document.createElement("main");
 const footer = document.querySelector("footer");
+const search= document.querySelector("#search");
 body.append(main);
 body.insertBefore(main, footer);
 
@@ -22,13 +23,28 @@ function deleteButton(ligne, buttondelete){
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//searchbar
+search.onclick = function(e){
+    let valeur = document.querySelector("#search-bar").value;
+    fetch('https://character-database.becode.xyz/characters?name' + valeur)
+    .then(response => response.json())
+    .then(data => {
+        console.table(data);
+        e.preventDefault();
+        while (main.firstChild) {
+            main.removeChild(main.firstChild);
+        }
+        for ( Element of data) {
+            console.log(Element);
+        }
+    })
+}
 
 fetch("https://character-database.becode.xyz/characters")
 .then(response => response.json())
 .then((data) =>{
     
     console.log("Vous avez reussi a récupérer les API.");
-    
     //Boucle permettant de créer des articles
     data.forEach(ligne  => {
         
