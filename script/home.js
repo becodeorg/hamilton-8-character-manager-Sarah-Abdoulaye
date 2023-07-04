@@ -5,6 +5,23 @@ const footer = document.querySelector("footer");
 body.append(main);
 body.insertBefore(main, footer);
 
+//-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+// Code pour supprimer le activeCharactere
+function deleteButton(ligne, buttondelete){
+    buttondelete.onclick= function(e){
+        console.log(buttondelete);
+        e.preventDefault();
+        fetch("https://character-database.becode.xyz/characters/" + ligne, {
+            method: "DELETE",
+            //Le header défini que les données qu'on envoi seront en format JSON (metadata, complément d'information à destination de l'API)
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+    }
+}
+//------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 fetch("https://character-database.becode.xyz/characters")
 .then(response => response.json())
@@ -49,17 +66,21 @@ fetch("https://character-database.becode.xyz/characters")
         buttondelete.className = "buttondelete";
         console.log(buttondelete);
         buttondelete.innerHTML = "Delete";
+        deleteButton(ligne.id, buttondelete);
         
+        
+        console.log(ligne);
         // bouton permmettant de modifier une carte
         let buttonedit = document.createElement("button");
         articleCharacter.appendChild(buttonedit);
         buttonedit.className = "buttonedit";
         console.log(buttonedit);
         buttonedit.innerHTML = "Edit";
-        // Code pour supprimer le activeCharactere
-        buttondelete.addEventListener("click", () => {
+                        
+        // Code pour modifier le activeCharactere
+        /*button.addEventListener("click", () => {
             fetch("https://character-database.becode.xyz/characters/", {
-                method: "DELETE",
+                method: "PUT",
                 //Le header défini que les données qu'on envoi seront en format JSON (metadata, complément d'information à destination de l'API)
                 headers: {
                     "Content-Type": "application/json",
@@ -71,9 +92,7 @@ fetch("https://character-database.becode.xyz/characters")
                     image : img,
                 })
             })
-        })
-
-
+        })*/
         /*
         //permet de supprimer l'article localement mais pas sur le serveur.
         buttondelete.addEventListener("click", () => {
@@ -87,3 +106,4 @@ fetch("https://character-database.becode.xyz/characters")
     });
 })
 .catch(error => console.log("Une erreur c'est produite lors du chargement de la page"));
+
