@@ -31,8 +31,16 @@
         </div>
     </nav>
 
-    <main id="card-contenaire">
-        
+    <main>
+        <form action="create.html" method="POST" emctype="multipart/form-data">
+            <label for=""></label>
+            <input type="file" accept="image/*" name="img" id="img">
+            <label for=""></label>
+            <input type="text" name="name" id="name">
+            <label for=""></label>
+            <input type="text" name="descritpion" id="descritpion">
+            <a href="#" type="submit" id="enregistrer">Enregistrer</a>
+        </form>
     </main>
 
     <footer>
@@ -67,5 +75,5 @@
     </footer>
 </body>
 <script src="../script/script.js"></script>
-<script src="https://cdn.ckeditor.com/ckeditor5/38.1.0/classic/ckeditor.js%22%3E"></script>
+<script src="../script/create-edit.js"></script>
 </html>

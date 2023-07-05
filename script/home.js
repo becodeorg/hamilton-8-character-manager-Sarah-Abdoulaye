@@ -26,7 +26,7 @@ function deleteButton(ligne, buttondelete){
 //searchbar
 search.onclick = function(e){
     let valeur = document.querySelector("#search-bar").value;
-    fetch('https://character-database.becode.xyz/characters?name' + valeur)
+    fetch('https://character-database.becode.xyz/characters?name='+ valeur)
     .then(response => response.json())
     .then(data => {
         console.table(data);
@@ -34,9 +34,50 @@ search.onclick = function(e){
         while (main.firstChild) {
             main.removeChild(main.firstChild);
         }
-        for ( Element of data) {
-            console.log(Element);
-        }
+        for ( element of data) {
+            
+        // Permet de creer l'article en fonction du nombre d'élément dans l'API
+            let articleCharacter = document.createElement("article");
+            main.append(articleCharacter);
+        
+            // Permet de creer une img "img" pour chaque article
+            let img = document.createElement("img");
+            articleCharacter.append(img);
+            img.src = 'data:image/png;base64,' + element.image;
+
+            // Permet de creer un paragraphe "nom" pour chaque article
+            let nom = document.createElement("p");
+            nom.className = "nom";
+            articleCharacter.append(nom);
+            nom.innerText = element.name;
+            
+            // Permet de creer une div "short description" pour chaque article
+            let shortdescription = document.createElement("div");
+            shortdescription.className = "shortdescription";
+            articleCharacter.append(shortdescription);
+            shortdescription.innerText = element.shortDescription;
+        
+            // Permet de creer une div "description" pour chaque article
+            let description = document.createElement("div");
+            description.className = "description";
+            articleCharacter.append(description);
+            description.innerHTML = element.description;
+
+            //permet de creer un bouton pemettant de supprimer une carte
+            let buttondelete = document.createElement("button");
+            articleCharacter.appendChild(buttondelete);
+            buttondelete.className = "buttondelete";
+            buttondelete.innerHTML = "Delete";
+            deleteButton(element.id, buttondelete);
+            
+    
+            // bouton permmettant de modifier une carte
+            let buttonedit = document.createElement("button");
+            articleCharacter.appendChild(buttonedit);
+            buttonedit.className = "buttonedit";
+            console.log(buttonedit);
+            buttonedit.innerHTML = "Edit";
+            }
     })
 }
 
@@ -109,12 +150,6 @@ fetch("https://character-database.becode.xyz/characters")
                 })
             })
         })*/
-        /*
-        //permet de supprimer l'article localement mais pas sur le serveur.
-        buttondelete.addEventListener("click", () => {
-            const articleCharacter = buttondelete.parentNode;
-            articleCharacter.remove();
-        });*/
 
         // Permet d'afficher pour tester. 
         //console.log(imgBase);
@@ -122,4 +157,3 @@ fetch("https://character-database.becode.xyz/characters")
     });
 })
 .catch(error => console.log("Une erreur c'est produite lors du chargement de la page"));
-
