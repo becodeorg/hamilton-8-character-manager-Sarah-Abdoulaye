@@ -26,6 +26,7 @@ function deleteButton(ligne, buttondelete){
 //searchbar
 search.onclick = function(e){
     let valeur = document.querySelector("#search-bar").value;
+    
     fetch('https://character-database.becode.xyz/characters?name='+ valeur)
     .then(response => response.json())
     .then(data => {
@@ -70,12 +71,11 @@ search.onclick = function(e){
             buttondelete.innerHTML = "Delete";
             deleteButton(element.id, buttondelete);
             
-    
             // bouton permmettant de modifier une carte
-            let buttonedit = document.createElement("button");
+            let buttonedit = document.createElement("a");
             articleCharacter.appendChild(buttonedit);
+            buttonedit.setAttribute('href','create.html?id='+data.id)
             buttonedit.className = "buttonedit";
-            console.log(buttonedit);
             buttonedit.innerHTML = "Edit";
             }
     })
