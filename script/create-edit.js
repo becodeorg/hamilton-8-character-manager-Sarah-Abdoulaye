@@ -7,6 +7,7 @@ if (postID !== null) {
     function renderOneCharacter(data) {   
         document.querySelector('#name').value = data.name;
         document.querySelector('#description').value = data.description;
+        document.querySelector('img')
     }
 
     // Récupérer les données du personnage à partir de son ID
@@ -17,7 +18,7 @@ if (postID !== null) {
 
     // Récupérer les valeurs des champs de texte pour le nom et la description du personnage
     let name = document.querySelector('#name').value;
-    let description = document.querySelector('#description').value;
+    let description = document.querySelector('#description');
 
     (async () => {
         const rawResponse = await fetch(`https://character-database.becode.xyz/characters/${postID}`, {
