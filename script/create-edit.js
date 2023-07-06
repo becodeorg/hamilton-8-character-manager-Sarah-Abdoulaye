@@ -10,7 +10,7 @@ document.querySelector("#enregistrer").onclick = function(e){
     }))
     const Firstname = document.querySelector("#name").value;
     const Description = document.querySelector("#description"); 
-    
+    let image64;
     toDataURL(document.querySelector('input[type=file]').files[0].name)
     .then(dataUrl => {
 
