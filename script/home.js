@@ -22,7 +22,7 @@ function deleteButton(ligne, buttondelete){
     }
 }
 //------------------------------------------------------------------------------------------------------------------------------------------------------
-documet
+
 //searchbar
 search.onclick = function(e){
     let valeur = document.querySelector("#search-bar").value;
