@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.1.0/classic/ckeditor.js"></script>
     <title>New character</title>
 </head>
 <body>
@@ -11,7 +12,7 @@
         <h1>Character Manager</h1>
         <ul class="menu">
             <li class="lien-menu">
-                <input type="search"id="search-bar">
+                <input type="search" id="search-bar">
                 <button type="search" id="search">
                     <i class="fa fa-search"></i>
                 </button>
@@ -32,6 +33,7 @@
     </nav>
 
     <main>
+
         <form action="create.html" method="POST" emctype="multipart/form-data">
             <label for=""></label>
             <input type="file" accept="image/*" name="img" id="img">

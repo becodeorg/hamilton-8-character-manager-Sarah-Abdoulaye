@@ -96,6 +96,7 @@ fetch("https://character-database.becode.xyz/characters")
         // Permet de creer une img "img" pour chaque article
         let img = document.createElement("img");
         articleCharacter.append(img);
+        img.className = "img";
         const imgBase = ligne.image;
         img.src = 'data:image/png;base64,' + imgBase;
 

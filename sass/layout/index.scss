@@ -6,16 +6,19 @@ body{
         justify-content: center;
 
     article{
-            border: solid $orangefonce  5px;
-            background-color: rgb(59, 21, 21);
-            margin: 1%;
-            padding: 3%;
-            width: 400px;
-            height: 450px;
+            border: solid transparent 5px;
+            background-color: rgb(102, 50, 50);
+            margin: 2%;
+            padding: 2%;
+            width: 360px;
+            height: 480px;
             border-radius: 20px;
             @include box-shadow;
             color: rgb(234, 217, 248);
             text-align: center;
+                &:hover {
+                    transform: scale(1.1);
+                }
             .nom{
                 font-size: 1.5rem;
                 padding: 6%;
@@ -29,7 +32,7 @@ body{
                 
                 &:hover {
                     overflow: hidden;
-                    -webkit-line-clamp: 5;
+                    -webkit-line-clamp: 4;
                     -webkit-box-orient: vertical;
                     text-overflow: ellipsis;
                     display: -webkit-box;
@@ -37,9 +40,13 @@ body{
                 
             }
             .img{
-                width: 100px;
-                height: 100px;
-                padding: 5%;
+                width: 180px;
+                height: 180px;
+                &:hover {
+                    transform:  scale(1.1);
+                
+                    
+                }
             }
             button {
                 border-style: none;
@@ -48,12 +55,23 @@ body{
                 width: 35%;
                 border-radius: 5%;
                 height: 10%;
+                cursor: pointer;
             }
             .buttonedit {
-
-            }
+                cursor: cell;
+                background-color: $backColorFoot;
+                &:hover {
+                    background-color: rgb(143, 143, 206);
+                    transform: scale(1.2);
+                }
+            }   
             .buttondelete {
-
+                cursor: not-allowed;
+                background-color: $kaki;
+                &:hover {
+                    background-color:$red;
+                    transform: scale(1.2);
+                }
             }
         }
     }
