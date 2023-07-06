@@ -2,97 +2,48 @@
         width: 100%;
         @include row-spacebetween;
         @include co-ka;
-        
-        h1{
+        padding: 2%;
+        .h1{
             font-size: 2.5rem;
             text-transform: uppercase;
             margin-left: 1%;
             color: $orangefonce;
         }
-        .menu{
-            @include row-spacearound;
-            margin:2%;
-            width: 30%;
-            .lien-menu{
-                width: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                .lien-nav{
-                    color: $orangefonce;
-                    border: solid $orangefonce 1px;
-                    padding: 3%;
-                    border-radius: 10px;
-                    text-transform: uppercase;
-                    width: 60%;
-                    text-align: center;
-                    &:hover{
-                        transform: scale(1.5);
-                        background-color: $orangefonce;
-                        color: $kaki;
-                    }
-                }
-            }
-        }
-        .burger{
-            display: none;
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            .bar{
+        .lien-nav{
+            color: $orangefonce;
+            border: solid $orangefonce 1px;
+            border-radius: 10px;
+            text-transform: uppercase;
+            width: 10%;
+            text-align: center;
+            padding: 15px;
+            &:hover{
+                transform: scale(1.2);
                 background-color: $orangefonce;
-                width: 40px;
-                height: 4px;
-                margin-bottom:7px;
+                color: $kaki;
             }
         }
     }
 
     @media screen and (max-width:765px){
         .nav{
-            h1{
+            .h1{
                 font-size: 2rem;
                 padding: 1%;
             }
-            .menu{
-                position: absolute;
-                width: 100vw;
-                height: 100vh;
-                @include co-ka;
-                color: $orangefonce;
-                top: -15px;
-                left: -110%;
-                @include column;
-                padding-top: 100px;
-                .lien-menu{
-                    margin-top: 25px;
-                    width: 100%;
-                    .lien-nav{
-                        border: none;
-                        border-bottom: solid $orangefonce 2px;
-                        font-size: 2.5rem;
-                        text-align: left;
-                        border-radius: 0;
-                        width: 100%;
-                    }
-                    &:hover{
-                        transform: scale(0);
-                    }
-                }
-            }
-            .mobile-menu{
-                left: -15px;
-            }
-            .burger{
-                display: block;
+            .lien-nav{
+                width: 20%;
             }
         }
-    }
+    }    
     @media screen and (max-width:450px){
         .nav{
-            h1{
+            .h1{
                 font-size: 1.5rem;
                 padding:3%;
+            }
+            .lien-nav{
+                width: 30%;
             }
         }
     }
