@@ -96,7 +96,6 @@ fetch("https://character-database.becode.xyz/characters")
         // Permet de creer une img "img" pour chaque article
         let img = document.createElement("img");
         articleCharacter.append(img);
-        img.className = "img";
         const imgBase = ligne.image;
         img.src = 'data:image/png;base64,' + imgBase;
 
@@ -129,10 +128,10 @@ fetch("https://character-database.becode.xyz/characters")
         
         console.log(ligne);
         // bouton permmettant de modifier une carte
-        let buttonedit = document.createElement("button");
+        let buttonedit = document.createElement("a");
         articleCharacter.appendChild(buttonedit);
+        buttonedit.setAttribute('href','create.html?id='+ligne.id)
         buttonedit.className = "buttonedit";
-        console.log(buttonedit);
         buttonedit.innerHTML = "Edit";
                         
         // Code pour modifier le activeCharactere
