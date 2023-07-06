@@ -76,3 +76,51 @@ body{
         }
     }
 }
+
+
+// create input style
+
+main {
+    form {
+        display: flex;
+        flex-direction: column;
+        background-color:  rgb(102, 50, 50);
+        color: $white;
+        padding: 60px;
+        border-radius: 5px;
+        input {
+            border-style: none;
+            height: 40px;
+            width: 350px;
+            margin: 20px;
+        }
+        a {
+            color: $white;
+            background-color: blue;
+            height: 40px;
+            width: 150px;
+            text-align: center;
+            padding: 10px;
+            margin-left: 220px;
+        }
+      /*  input[type="file"] {
+            
+        } */
+    }
+}
+
+
+#card-contenaire {
+    margin: 20px;
+    input {
+        border-style: none;
+        height: 50px;
+        width: 300px;
+        padding: 10px;
+        font-size: 20px;
+    }
+    button {
+        border-style: none;
+        width: 50px;
+    }
+}
