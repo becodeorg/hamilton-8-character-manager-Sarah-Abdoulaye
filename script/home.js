@@ -50,10 +50,12 @@ search.addEventListener("click", async (e) => {
     }
 });
 
+//--------------------------------------------------------------------------------------------------------------
+//fetch permettant d'aller rechercher les données sur l'api
 fetch("https://character-database.becode.xyz/characters")
     .then(response => response.json())
     .then((data) => {
-        console.log("Vous avez réussi à récupérer les données de l'API.");
+        console.log("Vous avez réussi à récupérer les données deAPI.");
         data.forEach(createArticle);
     })
     .catch(error => console.log("Une erreur s'est produite lors du chargement de la page", error));
