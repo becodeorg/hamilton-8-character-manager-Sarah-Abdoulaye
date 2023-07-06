@@ -7,7 +7,7 @@ body.append(main);
 body.insertBefore(main, footer);
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------------------------
-// Code pour supprimer le activeCharactere
+// Code pour supprimer le personnage choisi
 function deleteButton(ligne, buttondelete){
     buttondelete.onclick= function(e){
         console.log(buttondelete);
@@ -134,23 +134,6 @@ fetch("https://character-database.becode.xyz/characters")
         buttonedit.className = "buttonedit";
         buttonedit.innerHTML = "Edit";
                         
-        // Code pour modifier le activeCharactere
-        /*button.addEventListener("click", () => {
-            fetch("https://character-database.becode.xyz/characters/", {
-                method: "PUT",
-                //Le header défini que les données qu'on envoi seront en format JSON (metadata, complément d'information à destination de l'API)
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body:JSON.stringify({
-                    name:nom ,
-                    shortDescription:shortdescription,
-                    description :  description,
-                    image : img,
-                })
-            })
-        })*/
-
         // Permet d'afficher pour tester. 
         //console.log(imgBase);
         console.log(img);
