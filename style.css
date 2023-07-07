@@ -107,13 +107,15 @@ footer .container .contact_container .contact ul {
 }
 footer .container .contact_container .contact ul li {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   width: 50%;
   align-items: flex-start;
 }
 footer .container .contact_container .contact ul li a {
   color: #b84c25;
   font-size: 1vw;
+  margin-left: 2%;
+  text-align: left;
 }
 footer .container .align-right {
   display: flex;

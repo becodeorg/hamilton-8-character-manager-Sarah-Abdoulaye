@@ -30,12 +30,14 @@ footer {
           width: 90%;
           & li{
             display: flex;
-            justify-content: space-around;
+            justify-content: center;
             width: 50%;
             align-items: flex-start;
             & a{
               color:$orangefonce;
               font-size: 1vw;
+              margin-left: 2%;
+              text-align:left;
             }
           }
          }
