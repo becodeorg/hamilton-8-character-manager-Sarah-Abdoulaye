@@ -5,7 +5,7 @@ footer {
     @include ka-co;
      & .contact_container {
       flex-direction: column;
-      
+      background-color: transparent;
        & .contact {
         margin: 1vw;
         width: 30vw;
@@ -15,6 +15,9 @@ footer {
         padding-top: 3vw;
          & img {
           margin-bottom: 2vw;
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
          }
          & p {
           background-color: $white;

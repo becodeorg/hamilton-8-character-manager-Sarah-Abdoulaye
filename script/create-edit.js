@@ -38,7 +38,7 @@ document.querySelector("#enregistrer").onclick = async function(e) {
     e.preventDefault();
 
     // Convertir l'image en une URL de données (base64)
-    const toDataURL = async (url) => {
+    /* const toDataURL = async (url) => {
         const response = await fetch(url);
         const blob = await response.blob();
         return new Promise((resolve, reject) => {
@@ -47,14 +47,24 @@ document.querySelector("#enregistrer").onclick = async function(e) {
             reader.onerror = reject;
             reader.readAsDataURL(blob);
         });
-    };
+    };*/
+
+    const toDataURL = (src) => {
+        if (src) {
+            const reader = new FileReader()
+            reader.onloadend = () => {
+                console.log(reader.result)
+            }
+            return reader.readAsDataURL(src)
+        }
+    }
 
     const name = document.querySelector("#name").value;
     const description = document.querySelector("#description").value;
 
     try {
         // Convertir l'image en URL de données (base64)
-        const dataUrl = await toDataURL(document.querySelector('input[type=file]').files[0].name);
+        const dataUrl = await toDataURL(document.querySelector('#img').files[0]);
         console.log(dataUrl);
         const index = dataUrl.indexOf(',');
         const image64 = dataUrl.substring(index + 1);
@@ -90,6 +100,6 @@ if (postID !== null) {
 
     const name = document.querySelector('#name').value;
     const description = document.querySelector('#description').value;
-
+    const image = document.querySelector('#img').value;
     updateCharacterData(postID, name, description, image64);
 }
