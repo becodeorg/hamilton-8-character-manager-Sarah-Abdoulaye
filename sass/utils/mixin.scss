@@ -43,3 +43,21 @@
         -webkit-box-shadow: -2px 5px 10px 0px $orangefonce;
         -moz-box-shadow: -2px 5px 10px 0px $orangefonce; 
     }
+
+    @mixin footer{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        border: solid $orangefonce 2px;
+        border-radius: 25px;
+        margin:5%;
+        padding: 2%;
+    }
+
+    @mixin footer2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }

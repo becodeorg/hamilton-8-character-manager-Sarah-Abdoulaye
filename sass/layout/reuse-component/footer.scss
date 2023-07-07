@@ -1,45 +1,77 @@
 footer {
+  width: 100%;
+  @include ka-co;
   & .container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1vw;
-    @include ka-co;
+
      & .contact_container {
       flex-direction: column;
-      background-color: transparent;
+      width: 50%;
+      color:$orangefonce;
+      font-size: 2.5vw;
        & .contact {
-        margin: 1vw;
-        width: 30vw;
-        height: 21vw;
-        text-align: center;
-        background-color: $backColorDiv;
-        padding-top: 3vw;
+        @include footer;
          & img {
-          margin-bottom: 2vw;
-          width: 100px;
-          height: 100px;
+          width: 20%;
           border-radius: 50%;
          }
          & p {
-          background-color: $white;
-          padding: 0.2vw;
-          margin: 0vw 2vw;
           font-size: 1.5vw;
          }
          & ul {
-          background-color: $white;
-          margin: 2vw;
-          padding: 0vw;
           font-size: 1.4vw;
-          width: 26vw;
-          height: 6vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 90%;
+          & li{
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
+            align-items: flex-start;
+            & a{
+              color:$orangefonce;
+              font-size: 1vw;
+            }
+          }
          }
        }
      }
      & .align-right {
-      background-color: red;
-      width: 70%;
-      margin: 1vw 0vw 1vw 0.5vw;
-      background-color: $backColorDiv;
+      @include footer2;
+      width: 50%;
+      border: solid $orangefonce 2px;
+      border-radius: 25px;
+      padding: 6% 0;
+      .align-right-list{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        width: 70%;
+        .align-right-lien{
+          padding: 2%;
+          margin: 2%;
+          border: solid $orangefonce 2px;
+          width: 50%;
+          border-radius: 25px;
+          text-align: center;
+          align-items: center;
+          .lien{
+            color:$orangefonce;
+            font-size: 2.5vw;
+            &:hover{
+              color: $kaki;
+            }
+          }
+          &:hover{
+            background-color: $orangefonce;
+          }
+        }
+      }
      }
   }
 }

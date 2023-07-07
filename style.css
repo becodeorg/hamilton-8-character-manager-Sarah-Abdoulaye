@@ -64,48 +64,91 @@ body {
     width: 30%;
   }
 }
+footer {
+  width: 100%;
+  background: linear-gradient(Khaki, #FF7F50);
+}
 footer .container {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 1vw;
-  background: linear-gradient(Khaki, #FF7F50);
 }
 footer .container .contact_container {
   flex-direction: column;
-  background-color: transparent;
+  width: 50%;
+  color: #b84c25;
+  font-size: 2.5vw;
 }
 footer .container .contact_container .contact {
-  margin: 1vw;
-  width: 30vw;
-  height: 21vw;
-  text-align: center;
-  background-color: rgb(190, 183, 183);
-  padding-top: 3vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border: solid #b84c25 2px;
+  border-radius: 25px;
+  margin: 5%;
+  padding: 2%;
 }
 footer .container .contact_container .contact img {
-  margin-bottom: 2vw;
-  width: 100px;
-  height: 100px;
+  width: 20%;
   border-radius: 50%;
 }
 footer .container .contact_container .contact p {
-  background-color: white;
-  padding: 0.2vw;
-  margin: 0vw 2vw;
   font-size: 1.5vw;
 }
 footer .container .contact_container .contact ul {
-  background-color: white;
-  margin: 2vw;
-  padding: 0vw;
   font-size: 1.4vw;
-  width: 26vw;
-  height: 6vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 90%;
+}
+footer .container .contact_container .contact ul li {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  align-items: flex-start;
+}
+footer .container .contact_container .contact ul li a {
+  color: #b84c25;
+  font-size: 1vw;
 }
 footer .container .align-right {
-  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  border: solid #b84c25 2px;
+  border-radius: 25px;
+  padding: 6% 0;
+}
+footer .container .align-right .align-right-list {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   width: 70%;
-  margin: 1vw 0vw 1vw 0.5vw;
-  background-color: rgb(190, 183, 183);
+}
+footer .container .align-right .align-right-list .align-right-lien {
+  padding: 2%;
+  margin: 2%;
+  border: solid #b84c25 2px;
+  width: 50%;
+  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+}
+footer .container .align-right .align-right-list .align-right-lien .lien {
+  color: #b84c25;
+  font-size: 2.5vw;
+}
+footer .container .align-right .align-right-list .align-right-lien .lien:hover {
+  color: Khaki;
+}
+footer .container .align-right .align-right-list .align-right-lien:hover {
+  background-color: #b84c25;
 }
 
 body {
